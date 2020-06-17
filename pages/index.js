@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import PwaComponent from '../components/PwaComponent'
 export default function Home() {
   return (
     <div className="container">
@@ -15,9 +15,10 @@ export default function Home() {
       </Head>
 
       <main>
+        
         <h1 className="title">Next.js as a PWA
         </h1>
-
+        <PwaComponent/>
         <p className="description">
           Save it to your homescreen
         </p>

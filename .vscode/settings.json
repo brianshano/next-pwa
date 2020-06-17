@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fe732435-1ca3-46d3-bedb-872e3e46b317/resourceGroups/ETN-App-DigitalHealthcare-Dev-rg/providers/Microsoft.Web/sites/emcb-insights/slots/pwa-test",
+    "appService.deploySubpath": "."
+}
