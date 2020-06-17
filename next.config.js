@@ -1,19 +1,21 @@
-const withOffline = require('next-offline');
+const withPWA = require("next-pwa");
 
-const nextConfig = {
-  target: 'serverless',
-  transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
-  // Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
-  // turn on the SW in dev mode so that we can actually test it
-  generateInDevMode: true,
-  workboxOpts: {
-    swDest: 'static/service-worker.js',
+module.exports = withPWA({
+  pwa: {
+    disable: process.env.NODE_ENV === 'development',
+    // disable: false,
+    register: true,
+    // scope: '/app',
+    // sw: 'service-worker.js',
+    //...
     runtimeCaching: [
+      // For now, request everything from network first.
+      // TODO cache specific file types by default once app is more established
       {
         urlPattern: /^https?.*/,
-        handler: 'NetworkFirst',
+        handler: "NetworkFirst",
         options: {
-          cacheName: 'https-calls',
+          cacheName: "https-calls",
           networkTimeoutSeconds: 15,
           expiration: {
             maxEntries: 150,
@@ -24,8 +26,17 @@ const nextConfig = {
           },
         },
       },
+      {
+        urlPattern: /.*/i,
+        handler: "NetworkFirst",
+        options: {
+          cacheName: "others",
+          expiration: {
+            maxEntries: 16,
+            maxAgeSeconds: 24 * 60 * 60, // 24 hours
+          },
+        },
+      },
     ],
   },
-};
-
-module.exports = withOffline(nextConfig);
+});

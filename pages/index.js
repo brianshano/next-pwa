@@ -7,7 +7,7 @@ export default function Home() {
         <title>Next PWA</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
-      <meta name="theme-color" content="#72B340" />
+        <meta name="theme-color" content="#e4c73b" />
       <meta
         name="description"
         content="make your Next.js application work offline using service workers via Google's workbox"

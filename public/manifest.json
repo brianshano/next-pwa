@@ -15,7 +15,8 @@
     ],
     "background_color": "#007bc1",
     "description": "make your Next.js application work offline using service workers via Google's workbox",
-    "display": "fullscreen",
+    "display": "standalone",
     "start_url": "/?pwa=true",
-    "theme_color": "#e4c73b"
+    "theme_color": "#e4c73b",
+    "orientation": "portrait"
   }
