@@ -1,0 +1,21 @@
+{
+    "name": "Next PWA/Offline",
+    "short_name": "Next PWA",
+    "icons": [
+      {
+        "src": "/icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "background_color": "#007bc1",
+    "description": "make your Next.js application work offline using service workers via Google's workbox",
+    "display": "fullscreen",
+    "start_url": "/?pwa=true",
+    "theme_color": "#e4c73b"
+  }
