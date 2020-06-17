@@ -1,51 +1,75 @@
-import Head from 'next/head'
-
+import Head from "next/head";
+import PwaComponent from "../components/PwaComponent";
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Next PWA</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <link
+          href="/splashscreens/iphone5_splash.png"
+          media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/iphone6_splash.png"
+          media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/iphoneplus_splash.png"
+          media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/iphonex_splash.png"
+          media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/iphonexr_splash.png"
+          media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/iphonexsmax_splash.png"
+          media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/ipad_splash.png"
+          media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/ipadpro1_splash.png"
+          media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/ipadpro3_splash.png"
+          media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image"
+        />
+        <link
+          href="/splashscreens/ipadpro2_splash.png"
+          media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+          rel="apple-touch-startup-image"
+        />
+        <meta name="theme-color" content="#e4c73b" />
+        <meta
+          name="description"
+          content="make your Next.js application work offline using service workers via Google's workbox"
+        />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className="title">Next.js as a PWA</h1>
+        <PwaComponent />
+        <p className="description">Save it to your homescreen</p>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <p className="description">Version 0.2</p>
       </main>
 
       <footer>
@@ -54,7 +78,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -205,5 +229,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
