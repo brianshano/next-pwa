@@ -142,7 +142,7 @@ export default function Home() {
         <PwaComponent />
         <p className="description">Save it to your homescreen</p>
 
-        <p className="description">Version 0.3</p>
+        <p className="description">Version 0.4</p>
       </main>
 
       <footer>
