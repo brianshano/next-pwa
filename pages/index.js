@@ -76,10 +76,9 @@ export default function Home() {
           sizes="16x16"
           href="/icons/favicon-16x16.png"
         />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#007bc1" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff"></meta>
+        <meta name="theme-color" content="#007bc1"></meta>
         <link
           href="/splashscreens/iphone5_splash.png"
           media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
@@ -130,7 +129,7 @@ export default function Home() {
           media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
           rel="apple-touch-startup-image"
         />
-        <meta name="theme-color" content="#e4c73b" />
+        <meta name="theme-color" content="#007bc1" />
         <meta
           name="description"
           content="make your Next.js application work offline using service workers via Google's workbox"
