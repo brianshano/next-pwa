@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function PwaComponent() {
     const [isInstallable, setIsInstallable] = useState(false);
+    const [showIosInstall, setShowIosInstall] = useState(false);
     const [deferredPrompt, setDeferredPrompt] = useState();
 
   const handleClick = () => {
@@ -30,9 +31,23 @@ export default function PwaComponent() {
       // Update UI notify the user they can install the PWA
       setIsInstallable(true)
     });
+
+    // Detects if device is on iOS 
+const isIos = () => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    return /iphone|ipad|ipod/.test( userAgent );
+  }
+  // Detects if device is in standalone mode
+  const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+  
+  // Checks if should display install popup notification:
+  if (isIos() && !isInStandaloneMode()) {
+    setShowIosInstall(true);
+  }
   }, []);
   return <div>
       <div>This is a component (to check PWA readiness)</div>
-      {isInstallable ? <button onClick={handleClick}>Install PWA</button> : <div>Not Installable</div>}
+      {isInstallable ? <div><button onClick={handleClick}>Install PWA</button></div> : <div>Not Installable</div>}
+      {showIosInstall ? <div><button onClick={handleClick}>Install PWA on IOS</button></div> : <div>Not ios</div>}
       </div>;
 }
