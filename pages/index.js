@@ -76,6 +76,7 @@ export default function Home() {
           sizes="16x16"
           href="/icons/favicon-16x16.png"
         />
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="msapplication-TileColor" content="#007bc1" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#007bc1"></meta>
@@ -129,6 +130,10 @@ export default function Home() {
           media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
           rel="apple-touch-startup-image"
         />
+        {/* <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->  */}
+        <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="/splashscreens/iphone6_splash.png"/> 
+        {/* <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->  */}
+        <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/splashscreens/iphone6_splash.png"/>  
         <meta name="theme-color" content="#007bc1" />
         <meta
           name="description"
@@ -141,7 +146,7 @@ export default function Home() {
         <PwaComponent />
         <p className="description">Save it to your homescreen</p>
 
-        <p className="description">Version 0.5</p>
+        <p className="description">Version 0.6</p>
       </main>
 
       <footer>
