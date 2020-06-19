@@ -7,6 +7,8 @@ export default function PwaComponent() {
 
   const handleClick = () => {
       console.log('Install Clicked!');
+      //remove the button
+      setShowIosInstall(false);
       deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
     deferredPrompt.userChoice.then((choiceResult) => {
@@ -15,6 +17,7 @@ export default function PwaComponent() {
       } else {
         console.log("User dismissed the install prompt");
       }
+      deferredPrompt = null;
     });
   }
 
